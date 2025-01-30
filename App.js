@@ -8,6 +8,7 @@ import {
   Welcome,
   SignIn,
   OTP,
+  OCR,
   LogIn,
 } from './src/components/screens';
 const Stack = createNativeStackNavigator();
@@ -19,6 +20,8 @@ export default function App() {
         screenOptions={{headerShown: false}}
         initialRouteName="Welcome">
           
+        <Stack.Screen name="OCRPage" component={OCR} />
+
       
         <Stack.Screen name="Main" component={DrawerNavigation} />
         <Stack.Screen name="Welcome" component={Welcome} />

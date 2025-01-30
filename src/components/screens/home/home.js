@@ -13,6 +13,12 @@ import {
   launchImageLibrary as _launchImageLibrary,
   launchCamera as _launchCamera,
 } from 'react-native-image-picker';
+import { useNavigation } from '@react-navigation/native'; // Import useNavigation
+
+
+
+
+
 let launchImageLibrary = _launchImageLibrary;
 let launchCamera = _launchCamera;
 
@@ -20,6 +26,7 @@ const {width} = Dimensions.get('window');
 const scale = width / 420;
 
 export default function home() {
+  //----------------------------------------------
   const [selectedFile, setSelectedFile] = useState(null);
   const pickDocument = async () => {
     try {
@@ -58,9 +65,13 @@ export default function home() {
     }
   };
 
+  //-------------------------------------
   const [items, setItems] = useState(Menu);
 
+  //-------------------------------
   const [selectedImage, setSelectedImage] = useState(null);
+
+
 
   const openImagePicker = () => {
     const options = {
@@ -95,6 +106,15 @@ export default function home() {
     }
   };
 
+
+  //--------------------------------------------------------
+
+  const navigation = useNavigation(); // Get the navigation object
+
+  const handleImagePress = (items) => {
+    // Navigate to the OCR page and pass the data
+    navigation.navigate('OCRPage', { data: items });
+  };
   return (
     <SafeAreaView style={{backgroundColor: '#58626E'}}>
       <Header title="La tourné" />
@@ -179,7 +199,7 @@ export default function home() {
                     width: '100%',
                   }}>
                   <Image
-                    source={icons.avatar}
+                    source={icons.notVerified}
                     style={{
                       marginLeft: 10,
                       alignItems: 'center',
@@ -209,15 +229,17 @@ export default function home() {
 
                   
                     <View  style={{width: 50}}>
-                      <TouchableOpacity onPress={handleCameraLaunch}>
+
+                    <TouchableOpacity onPress={() => handleImagePress(elem)}>
+                      {/* <TouchableOpacity onPress={handleCameraLaunch}> */}
                       <Image
-                        source={icons.avatar}
+                        source={icons.scan}
                         style={{
                           marginLeft: 10,
                           alignItems: 'center',
-                          height: 40,
-                          width: 40,
-                          borderRadius: 50,
+                          height: 35,
+                          width: 35,
+                          
                         }}
                         
                       />

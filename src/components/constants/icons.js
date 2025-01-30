@@ -9,6 +9,8 @@ const profile = require('../../assets/bottomBarIcon/profile.png');
 const parametres = require('../../assets/bottomBarIcon/parametres.png');
 const avatar = require('../../assets/bottomBarIcon/avatar.jpg');
 const download = require('../../assets/bottomBarIcon/download.png');
+const scan = require('../../assets/bottomBarIcon/scan.png');
+const notVerified = require('../../assets/bottomBarIcon/notVerified.png');
 
 
 
@@ -31,6 +33,6 @@ export default {
   aPropos,
   avatar,
   notification,
-  profile,map,download,
+  profile,map,download,notVerified,scan
 };
 

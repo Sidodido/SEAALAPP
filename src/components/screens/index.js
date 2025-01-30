@@ -1,6 +1,7 @@
 
 import Apparailes from './apparailes/apparailes'
 import Home from './home/home'
+import OCR from './home/OCR'
 import Parametres from './parametres/parametres'
 import Statistiques from './statistiques/statistiques'
 import Map from './map/map'
@@ -34,6 +35,7 @@ export{
   LogIn,
   Welcome2,
   Welcome,
+  OCR,
 
 }
 

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -7,8 +7,8 @@ import {
   StyleSheet,
   ActivityIndicator,
 } from 'react-native';
-import {launchImageLibrary} from 'react-native-image-picker';
-import RNTesseractOcr from 'react-native-tesseract-ocr';
+import { launchImageLibrary } from 'react-native-image-picker';
+import TextRecognition from 'react-native-text-recognition';
 
 const OCRPage = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -43,8 +43,10 @@ const OCRPage = () => {
   const recognizeText = async imageUri => {
     setLoading(true);
     try {
-      // Ensure you have the correct language code
-      const text = await RNTesseractOcr.recognize(imageUri, 'LANG_ENGLISH','iygtvyg');
+      if (!TextRecognition) {
+        throw new Error('TextRecognition is not initialized');
+      }
+      const text = await TextRecognition.recognize(imageUri);
       const numbers = text.match(/\d+/g);
       setRecognizedText(numbers ? numbers.join(', ') : 'No numbers recognized');
     } catch (error) {
@@ -59,18 +61,18 @@ const OCRPage = () => {
     <View style={styles.container}>
       {selectedImage && (
         <Image
-          source={{uri: selectedImage}}
-          style={{width: 200, height: 200}}
+          source={{ uri: selectedImage }}
+          style={{ width: 200, height: 200 }}
           resizeMode="contain"
         />
       )}
-      <TouchableOpacity onPress={openImagePicker}>
-        <Text>Select Image</Text>
+      <TouchableOpacity onPress={openImagePicker} style={styles.button}>
+        <Text style={styles.buttonText}>Select Image</Text>
       </TouchableOpacity>
       {loading ? (
         <ActivityIndicator size="large" />
       ) : (
-        <Text>{recognizedText || 'No text recognized'}</Text>
+        <Text style={styles.recognizedText}>{recognizedText || 'No text recognized'}</Text>
       )}
     </View>
   );
@@ -82,6 +84,21 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
+  },
+  button: {
+    backgroundColor: '#007BFF',
+    padding: 10,
+    borderRadius: 5,
+    marginTop: 20,
+  },
+  buttonText: {
+    color: '#FFFFFF',
+    fontSize: 16,
+  },
+  recognizedText: {
+    marginTop: 20,
+    fontSize: 16,
+    textAlign: 'center',
   },
 });
 
