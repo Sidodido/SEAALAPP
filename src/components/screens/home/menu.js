@@ -6,7 +6,7 @@ const menu =[
         acces:"admin",
         title:"987324",
          category:"mobile",
-         adresseIP:"192:188:433:776",
+         adresseIP:"24 Rue Nezzar Kbaili Aissa, 22 Rue Hocine BELADJEL, El Djazair 16000",
          adresseMAC:"01:80:C2:00:00:00	",       
     },
 
@@ -15,7 +15,7 @@ const menu =[
         acces:"admin",
         title:"987324",
          category:"mobile",
-         adresseIP:"192:188:433:776",
+         adresseIP:"24 Rue Nezzar Kbaili Aissa, 22 Rue Hocine BELADJEL, El Djazair 16000",
          adresseMAC:"01:80:C2:00:00:00	",
     },
 
@@ -24,7 +24,7 @@ const menu =[
         acces:"admin",
         title:"987324",
          category:"mobile",
-         adresseIP:"192:188:433:776",
+         adresseIP:"24 Rue Nezzar Kbaili Aissa, 22 Rue Hocine BELADJEL, El Djazair 16000",
          adresseMAC:"01:80:C2:00:00:00	",
     },
 
@@ -33,7 +33,7 @@ const menu =[
         acces:"user",
         title:"987324",
          category:"tablette",
-         adresseIP:"192:188:433:776",
+         adresseIP:"24 Rue Nezzar Kbaili Aissa, 22 Rue Hocine BELADJEL, El Djazair 16000",
          adresseMAC:"01:80:C2:00:00:00	",    },
 
     {
@@ -41,7 +41,7 @@ const menu =[
         acces:"user",
         title:"987324",
          category:"tablette",
-         adresseIP:"192:188:433:776",
+         adresseIP:"24 Rue Nezzar Kbaili Aissa, 22 Rue Hocine BELADJEL, El Djazair 16000",
          adresseMAC:"01:80:C2:00:00:00	",    },
 
     {
@@ -49,14 +49,14 @@ const menu =[
         acces:"produit",
         title:"987324",
          category:"produit",
-         adresseIP:"192:188:433:776",
+         adresseIP:"24 Rue Nezzar Kbaili Aissa, 22 Rue Hocine BELADJEL, El Djazair 16000",
          adresseMAC:"01:80:C2:00:00:00	",    },
     {
         id: 7,
         acces:"produit",
         title:"987324",
          category:"produit",
-         adresseIP:"192:188:433:776",
+         adresseIP:"24 Rue Nezzar Kbaili Aissa, 22 Rue Hocine BELADJEL, El Djazair 16000",
          adresseMAC:"01:80:C2:00:00:00	",
     },
   

@@ -193,10 +193,11 @@ export default function home() {
                     alignItems: 'center',
                     flexDirection: 'row',
                     height: 80,
-                    backgroundColor: colors.secondary,
+                    backgroundColor: colors.tertiary,
                     marginTop: 10,
                     borderRadius: 15,
                     width: '100%',
+                    
                   }}>
                   <Image
                     source={icons.notVerified}
@@ -239,7 +240,7 @@ export default function home() {
                           alignItems: 'center',
                           height: 35,
                           width: 35,
-                          
+                          tintColor:colors.Quaternary
                         }}
                         
                       />
