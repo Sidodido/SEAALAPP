@@ -1,12 +1,12 @@
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { View, Text, Image, TouchableOpacity, TextInput, StyleSheet } from 'react-native';
-import { Input, Icon, Stack, Pressable, Center } from 'native-base';
+import { View, Text, Image,  TextInput, StyleSheet } from 'react-native';
 
 import { NativeBaseProvider } from 'native-base';
+
 import { colors, icons, images } from '../../constants';
 import { Dimensions } from 'react-native';
-import { Button, Card, Switch } from 'react-native-paper';
+import { Button} from 'react-native-paper';
 
 const { width } = Dimensions.get('window');
 const scale = width / 420;
@@ -91,7 +91,6 @@ export default function LogIn({ navigation }) {
                 left:80,
                 top:10,
                 borderRadius: 10,
-
                 color: colors.white,
               }}
               mode="contained"

@@ -8,6 +8,7 @@ const map = require('../../assets/bottomBarIcon/map.png');
 const profile = require('../../assets/bottomBarIcon/profile.png');
 const parametres = require('../../assets/bottomBarIcon/parametres.png');
 const avatar = require('../../assets/bottomBarIcon/avatar.jpg');
+const download = require('../../assets/bottomBarIcon/download.png');
 
 
 
@@ -30,6 +31,6 @@ export default {
   aPropos,
   avatar,
   notification,
-  profile,map,
+  profile,map,download,
 };
 

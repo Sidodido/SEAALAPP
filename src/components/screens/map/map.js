@@ -5,7 +5,7 @@ import Header from '../../header'
 export default function map() {
   return (
     <View>
-   <Header title="Map" />
+   <Header title="Trajectoire" />
     </View>
   )
 }
