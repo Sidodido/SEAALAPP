@@ -1,15 +1,8 @@
 import {View, Text, Image, Platform} from 'react-native';
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {
-  Apparailes,
-  Home,
-  Parametres,
-  Statistiques,
-  Map,
-} from '../screens';
+import {Apparailes, Home, Parametres, Statistiques, Map} from '../screens';
 import {colors, icons} from '../constants';
-
 
 const Tab = createBottomTabNavigator();
 const screenOptions = {
@@ -24,22 +17,16 @@ const screenOptions = {
     height: Platform.OS === 'ios' ? 90 : 60,
     borderRadius: 20,
     backgroundColor: colors.Quaternary,
-   
   },
-   headerShown: false,
+  headerShown: false,
 };
 
 const BottomNavigation = () => {
   return (
-    <Tab.Navigator
-    initialRouteName="DrawerHome"
-    screenOptions={screenOptions}>
-  
-
+    <Tab.Navigator initialRouteName="DrawerHome" screenOptions={screenOptions}>
       <Tab.Screen
         name="Map"
         component={Map}
-        
         options={{
           tabBarIcon: ({focused}) => {
             return (
@@ -47,7 +34,7 @@ const BottomNavigation = () => {
                 source={icons.map}
                 resizeMode="contain"
                 style={{
-         marginTop:20,
+                  marginTop: 20,
                   height: 30,
                   width: 30,
                   tintColor: focused ? colors.white : colors.white,
@@ -102,7 +89,7 @@ const BottomNavigation = () => {
                 source={icons.parametres}
                 resizeMode="contain"
                 style={{
-                  marginTop:20,
+                  marginTop: 20,
                   height: 30,
                   width: 30,
                   tintColor: focused ? colors.white : colors.white,
@@ -111,7 +98,6 @@ const BottomNavigation = () => {
             );
           },
         }}
-        
       />
     </Tab.Navigator>
   );

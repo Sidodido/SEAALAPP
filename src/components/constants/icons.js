@@ -13,18 +13,9 @@ const scan = require('../../assets/bottomBarIcon/scan.png');
 const notVerified = require('../../assets/bottomBarIcon/notVerified.png');
 const rechercheDest = require('../../assets/bottomBarIcon/rechercheDest.png');
 const trajectoire = require('../../assets/bottomBarIcon/trajectoire.png');
-
-
-
-
-
-
-
-
-
+const exitModel = require('../../assets/bottomBarIcon/exitModel.png');
 
 export default {
- 
   Home1,
   parametres,
   product,
@@ -33,6 +24,12 @@ export default {
   aPropos,
   avatar,
   notification,
-  profile,map,download,notVerified,scan,trajectoire,rechercheDest
+  exitModel,
+  profile,
+  map,
+  download,
+  notVerified,
+  scan,
+  trajectoire,
+  rechercheDest,
 };
-

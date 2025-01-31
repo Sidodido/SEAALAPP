@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Alert, ScrollView, TouchableOpacity} from 'react-native';
+import {Alert, ScrollView, TouchableOpacity} from 'react-native';
 import DocumentPicker from 'react-native-document-picker';
 import RNFS from 'react-native-fs';
 import Header from '../../header';
@@ -13,11 +13,7 @@ import {
   launchImageLibrary as _launchImageLibrary,
   launchCamera as _launchCamera,
 } from 'react-native-image-picker';
-import { useNavigation } from '@react-navigation/native'; // Import useNavigation
-
-
-
-
+import {useNavigation} from '@react-navigation/native'; // Import useNavigation
 
 let launchImageLibrary = _launchImageLibrary;
 let launchCamera = _launchCamera;
@@ -71,8 +67,6 @@ export default function home() {
   //-------------------------------
   const [selectedImage, setSelectedImage] = useState(null);
 
-
-
   const openImagePicker = () => {
     const options = {
       mediaType: 'photo',
@@ -106,14 +100,13 @@ export default function home() {
     }
   };
 
-
   //--------------------------------------------------------
 
   const navigation = useNavigation(); // Get the navigation object
 
-  const handleImagePress = (items) => {
+  const handleImagePress = items => {
     // Navigate to the OCR page and pass the data
-    navigation.navigate('OCRPage', { data: items });
+    navigation.navigate('OCRPage', {data: items});
   };
   return (
     <SafeAreaView style={{backgroundColor: '#58626E'}}>
@@ -153,11 +146,12 @@ export default function home() {
             }}>
             La date : 17/01/2025
           </Text>
-    
-          <Button  onPress={pickDocument}
+
+          <Button
+            onPress={pickDocument}
             style={{
               backgroundColor: colors.primary,
-          marginTop:70,
+              marginTop: 70,
               borderRadius: 10,
               color: colors.white,
             }}
@@ -172,18 +166,19 @@ export default function home() {
             </Text>
           </Button>
 
-          <Image onPress={uploadFile}
+          <Image
+            onPress={uploadFile}
             source={icons.download}
             style={{
               height: 100,
               width: 100,
               marginBottom: 6,
               borderRadius: 50,
-              tintColor:colors.primary,
+              tintColor: colors.primary,
             }}
-          /> 
+          />
 
-          <ScrollView style={{borderRadius:10,width: '98%'}}>
+          <ScrollView style={{borderRadius: 10, width: '98%'}}>
             {items.map(elem => {
               const {id, acces, title, category, adresseIP, adresseMAC} = elem;
               return (
@@ -197,7 +192,6 @@ export default function home() {
                     marginTop: 10,
                     borderRadius: 15,
                     width: '100%',
-                    
                   }}>
                   <Image
                     source={icons.notVerified}
@@ -219,7 +213,7 @@ export default function home() {
                     <Text style={{color: colors.Quaternary}}>{adresseIP}</Text>
                   </View>
 
-                  <View style={{marginRight:10,justifyContent: 'center'}}>
+                  <View style={{marginRight: 10, justifyContent: 'center'}}>
                     {/* {selectedImage && (
                       <Image
                         source={{uri: selectedImage}}
@@ -228,22 +222,19 @@ export default function home() {
                       />
                     )} */}
 
-                  
-                    <View  style={{width: 50}}>
-
-                    <TouchableOpacity onPress={() => handleImagePress(elem)}>
-                      {/* <TouchableOpacity onPress={handleCameraLaunch}> */}
-                      <Image
-                        source={icons.scan}
-                        style={{
-                          marginLeft: 10,
-                          alignItems: 'center',
-                          height: 35,
-                          width: 35,
-                          tintColor:colors.Quaternary
-                        }}
-                        
-                      />
+                    <View style={{width: 50}}>
+                      <TouchableOpacity onPress={() => handleImagePress(elem)}>
+                        {/* <TouchableOpacity onPress={handleCameraLaunch}> */}
+                        <Image
+                          source={icons.scan}
+                          style={{
+                            marginLeft: 10,
+                            alignItems: 'center',
+                            height: 35,
+                            width: 35,
+                            tintColor: colors.Quaternary,
+                          }}
+                        />
                       </TouchableOpacity>
                     </View>
                   </View>

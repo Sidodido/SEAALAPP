@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -7,7 +7,7 @@ import {
   StyleSheet,
   ActivityIndicator,
 } from 'react-native';
-import { launchImageLibrary } from 'react-native-image-picker';
+import {launchImageLibrary} from 'react-native-image-picker';
 import TextRecognition from 'react-native-text-recognition';
 
 const OCR = () => {
@@ -61,8 +61,8 @@ const OCR = () => {
     <View style={styles.container}>
       {selectedImage && (
         <Image
-          source={{ uri: selectedImage }}
-          style={{ width: 200, height: 200 }}
+          source={{uri: selectedImage}}
+          style={{width: 200, height: 200}}
           resizeMode="contain"
         />
       )}
@@ -72,7 +72,9 @@ const OCR = () => {
       {loading ? (
         <ActivityIndicator size="large" />
       ) : (
-        <Text style={styles.recognizedText}>{recognizedText || 'No text recognized'}</Text>
+        <Text style={styles.recognizedText}>
+          {recognizedText || 'No text recognized'}
+        </Text>
       )}
     </View>
   );

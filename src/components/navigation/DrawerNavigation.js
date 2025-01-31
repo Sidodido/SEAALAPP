@@ -102,7 +102,7 @@ const DrawerNavigation = () => {
       <Drawer.Screen
         name="Profile"
         options={{
-          drawerLabel: 'Profile',
+          drawerLabel: '-------',
           title: 'Profile',
           headerShadowVisible: false,
           drawerIcon: () => {
@@ -125,7 +125,7 @@ const DrawerNavigation = () => {
       <Drawer.Screen
         name="historique"
         options={{
-          drawerLabel: 'historique',
+          drawerLabel: '-------',
           title: 'historique',
           headerShadowVisible: false,
           drawerIcon: () => {
@@ -144,8 +144,6 @@ const DrawerNavigation = () => {
         }}
         component={Historique}
       />
-
-      
     </Drawer.Navigator>
   );
 };
