@@ -21,8 +21,6 @@ const notVerified = require('../../assets/bottomBarIcon/notVerified.png');
 
 
 
-
-
 export default {
  
   Home1,

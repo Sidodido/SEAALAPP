@@ -10,7 +10,7 @@ import {
 import { launchImageLibrary } from 'react-native-image-picker';
 import TextRecognition from 'react-native-text-recognition';
 
-const OCRPage = () => {
+const OCR = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [recognizedText, setRecognizedText] = useState('');
   const [loading, setLoading] = useState(false);
@@ -102,4 +102,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default OCRPage;
+export default OCR;
