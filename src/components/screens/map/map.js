@@ -15,12 +15,13 @@ import {
   StyleSheet,
   StatusBar,
   TextInput,
+  Image
 } from 'react-native';
 
 import { WebView } from 'react-native-webview';
 import html_script from './html_script';
 import data from './data';
-import { colors } from '../../constants';
+import { colors,icons } from '../../constants';
 class App extends React.Component {
   state = {
     address: '',
@@ -99,15 +100,29 @@ _setRoutes = async () => {
               value={this.state.address}
               onChangeText={(text) => this.setState({ address: text })}
             />
-            <TouchableOpacity style={styles.Button} onPress={this._getCoordinates}>
-              <Text style={styles.ButtonText}>Rechercher</Text>
+            <TouchableOpacity onPress={this._getCoordinates}>
+                <Image
+                       source={icons.rechercheDest}
+                       style={{
+                         height: 40,
+                         width: 40,
+                         tintColor:colors.primary
+                       }}
+                     />
             </TouchableOpacity>
           </View>
 
           {/* Button to set all routes */}
           <View style={styles.ButtonArea}>
-            <TouchableOpacity style={styles.Button} onPress={this._setRoutes}>
-              <Text style={styles.ButtonText}>Afficher Itinéraires</Text>
+            <TouchableOpacity  onPress={this._setRoutes}>
+        <Image
+                       source={icons.trajectoire}
+                       style={{
+                         height: 100,
+                         width: 100,
+                         tintColor:colors.primary
+                       }}
+                     />
             </TouchableOpacity>
           </View>
           </View>
