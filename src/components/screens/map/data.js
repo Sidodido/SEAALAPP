@@ -1,11 +1,8 @@
 const data = [
   {
-   
-  id: 8,
-  destination: 'bainem' 
-}
-  ,
-
+    id: 8,
+    destination: 'bainem',
+  },
   {
     id: 2,
     destination: 'bab el wed',
